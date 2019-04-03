@@ -1,11 +1,12 @@
 import * as React from "react";
-import Header from "../../Components/StickyHeader";
+import Header from "../../Components/Header";
+import StickyHeader from "../../Components/StickyHeader";
 
 const HomePresenter: React.SFC = () => {
   return (
-    <div style={{ height: "10000px" }}>
+    <div style={{ height: "2400px" }}>
+      <StickyHeader />
       <Header />
-      dddddddddddd
     </div>
   );
 };

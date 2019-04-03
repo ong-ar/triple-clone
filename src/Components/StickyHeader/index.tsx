@@ -41,7 +41,12 @@ const StickyHeader: React.SFC = () => {
   return (
     <Header
       topOffset={120}
-      style={{ height: "80px", borderBottom: "1px solid rgb(239, 239, 239)" }}
+      style={{
+        backgroundColor: "white",
+        borderBottom: "1px solid rgb(239, 239, 239)",
+        height: "80px",
+        zIndex: 1
+      }}
     >
       <HeaderLogo href="https://triple.guide">TRIPLE</HeaderLogo>
       <ExtraActionsContainer>
