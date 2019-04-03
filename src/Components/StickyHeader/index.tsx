@@ -18,13 +18,37 @@ const HeaderLogo = styled.a`
   text-decoration: none;
 `;
 
+const ExtraActionsContainer = styled.div`
+  padding-right: 50px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+`;
+
+const ExtraActionsItem = styled.a`
+  line-height: 80px;
+  font-size: 17px;
+  height: 80px;
+  margin: 0px 0px 0px 34px;
+  font-family: sans-serif;
+  display: inline-block;
+  color: rgba(58, 58, 58, 0.8);
+  text-decoration: none;
+`;
+
 const StickyHeader: React.SFC = () => {
   return (
-    <Header
-      topOffset={80}
-      style={{ height: "80px", backgroundColor: "red", display: "block" }}
-    >
+    <Header topOffset={120} style={{ height: "80px" }}>
       <HeaderLogo href="https://triple.guide">TRIPLE</HeaderLogo>
+      <ExtraActionsContainer>
+        <ExtraActionsItem href="https://triple-corp.com">
+          Triple Team
+        </ExtraActionsItem>
+        <ExtraActionsItem href="https://triple-corp.com/#contact">
+          Contact
+        </ExtraActionsItem>
+      </ExtraActionsContainer>
     </Header>
   );
 };
