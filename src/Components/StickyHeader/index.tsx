@@ -39,7 +39,10 @@ const ExtraActionsItem = styled.a`
 
 const StickyHeader: React.SFC = () => {
   return (
-    <Header topOffset={120} style={{ height: "80px" }}>
+    <Header
+      topOffset={120}
+      style={{ height: "80px", borderBottom: "1px solid rgb(239, 239, 239)" }}
+    >
       <HeaderLogo href="https://triple.guide">TRIPLE</HeaderLogo>
       <ExtraActionsContainer>
         <ExtraActionsItem href="https://triple-corp.com">
