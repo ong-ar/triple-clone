@@ -3,6 +3,7 @@ import * as React from "react";
 import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import background_img from "../../images/img-01-bg.png";
+import screen_img from "../../images/img-01-screen.jpg";
 import { FadeIn } from "../../Keyframes";
 
 const Container = styled.div`
@@ -29,7 +30,7 @@ const Contents = styled.div`
 `;
 
 const ContentsFirstItem = styled.h1`
-  animation-duration: 600ms;
+  animation-duration: 2000ms;
   animation-name: ${FadeIn(0, 10)};
   font-size: 100px;
   line-height: 1.1;
@@ -41,7 +42,7 @@ const ContentsFirstItem = styled.h1`
 `;
 
 const ContentsSecondItem = styled.p`
-  animation-duration: 900ms;
+  animation-duration: 1600ms;
   animation-name: ${FadeIn(0, 5)};
   font-size: 17px;
   line-height: 2;
@@ -53,9 +54,47 @@ const ContentsSecondItem = styled.p`
 `;
 
 const ContentsThirdItemContainer = styled.div`
-  animation-duration: 900ms;
+  animation-duration: 1600ms;
   animation-name: ${FadeIn(0, 5)};
   margin-top: 76px;
+`;
+
+const ContentsFourthItemContainer = styled.div`
+  animation-duration: 1600ms;
+  animation-name: ${FadeIn(0, 5)};
+  width: 330px;
+  height: 680px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 13px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px -6px 9px 0px inset;
+  border-radius: 48px;
+  background-color: rgb(250, 250, 250);
+  position: absolute;
+  top: 0px;
+  bottom: auto;
+  left: auto;
+  right: 0px;
+`;
+
+const ContentsFourthItem = styled.div`
+  width: 300px;
+  height: 650px;
+  top: 15px;
+  left: 15px;
+  background-size: 300px 650px;
+  border-radius: 33px;
+  background-image: url(${screen_img});
+  position: absolute;
+  background-repeat: no-repeat;
+`;
+const ContentsFourthItem2 = styled.div`
+  width: 162px;
+  height: 38px;
+  left: 84px;
+  border-radius: 18px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  background-color: rgb(250, 250, 250);
 `;
 
 const Header: React.FC = () => {
@@ -101,6 +140,10 @@ const Header: React.FC = () => {
               앱 설치하기
             </Button>
           </ContentsThirdItemContainer>
+          <ContentsFourthItemContainer>
+            <ContentsFourthItem />
+            <ContentsFourthItem2 />
+          </ContentsFourthItemContainer>
         </Contents>
       </Section>
     </Container>
