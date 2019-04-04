@@ -35,7 +35,7 @@ const ExtraActionsItem = styled.a`
   margin: 0px 0px 0px 34px;
 `;
 
-const Header: React.SFC = () => {
+const Header: React.FC = () => {
   return (
     <Container>
       <HeaderLogo href="https://triple.guide/intro/" />

@@ -14,7 +14,7 @@ interface IProps {
   style?: React.CSSProperties;
 }
 
-const Header: React.SFC<IProps> = ({
+const Header: React.FC<IProps> = ({
   topOffset = 0,
   duration = 1000,
   style = {},

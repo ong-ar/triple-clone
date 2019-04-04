@@ -37,7 +37,7 @@ const ExtraActionsItem = styled.a`
   text-decoration: none;
 `;
 
-const StickyHeader: React.SFC = () => {
+const StickyHeader: React.FC = () => {
   return (
     <Header
       topOffset={120}

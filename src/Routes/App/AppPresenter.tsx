@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../Home";
 import "./style.css";
 
-const AppPresenter: React.SFC = () => (
+const AppPresenter: React.FC = () => (
   <BrowserRouter>
     <Routes />
   </BrowserRouter>
 );
 
-const Routes: React.SFC = () => (
+const Routes: React.FC = () => (
   <Switch>
     <Route path={"/"} exact={true} component={Home} />
   </Switch>
