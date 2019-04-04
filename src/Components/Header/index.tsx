@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import background_img from "../../images/img-main-logo-white@3x.png";
 
 const Container = styled.div`
   padding: 83px 50px 17px;
@@ -15,7 +16,7 @@ const HeaderLogo = styled.a`
   height: 25px;
   background-size: 77px 25px;
   display: inline-block;
-  background-image: url(https://triple.guide/intro/images/img-main-logo-white@3x.png);
+  background-image: url(${background_img});
   vertical-align: top;
   background-repeat: no-repeat;
 `;

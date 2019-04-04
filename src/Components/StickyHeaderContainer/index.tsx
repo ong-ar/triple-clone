@@ -1,18 +1,18 @@
 import * as React from "react";
 import styled from "styled-components";
 
+interface IProps {
+  topOffset?: number;
+  duration?: number;
+  style?: React.CSSProperties;
+}
+
 const Container = styled.div`
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
 `;
-
-interface IProps {
-  topOffset?: number;
-  duration?: number;
-  style?: React.CSSProperties;
-}
 
 const Header: React.FC<IProps> = ({
   topOffset = 0,

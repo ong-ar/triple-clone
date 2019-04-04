@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import background_img from "../../images/img-intro-logo-dark@2x.png";
 import Header from "../StickyHeaderContainer";
 
 const HeaderLogo = styled.a`
@@ -7,7 +8,7 @@ const HeaderLogo = styled.a`
   width: 68px;
   height: 24px;
   background-size: 68px 24px;
-  background-image: url(https://triple.guide/images/img-intro-logo-dark@2x.png);
+  background-image: url(${background_img});
   text-indent: -9999px;
   top: 50%;
   position: absolute;
