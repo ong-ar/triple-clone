@@ -1,16 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import background_img from "../../images/img-intro-logo-dark@2x.png";
+import ExtraActionContainer from "./Components/ExtraActionContainer";
 import Logo from "./Components/Logo";
 import HeaderContainer from "./Components/StickyHeaderContainer";
-
-const ExtraActionsContainer = styled.div`
-  padding-right: 50px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-`;
 
 const ExtraActionsItem = styled.a`
   line-height: 80px;
@@ -21,6 +14,11 @@ const ExtraActionsItem = styled.a`
   display: inline-block;
   color: rgba(58, 58, 58, 0.8);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: rgba(58, 58, 58, 0.8);
+  }
 `;
 
 const StickyHeader: React.SFC = () => {
@@ -41,14 +39,14 @@ const StickyHeader: React.SFC = () => {
       >
         TRIPLE
       </Logo>
-      <ExtraActionsContainer>
+      <ExtraActionContainer>
         <ExtraActionsItem href="https://triple-corp.com">
           Triple Team
         </ExtraActionsItem>
         <ExtraActionsItem href="https://triple-corp.com/#contact">
           Contact
         </ExtraActionsItem>
-      </ExtraActionsContainer>
+      </ExtraActionContainer>
     </HeaderContainer>
   );
 };

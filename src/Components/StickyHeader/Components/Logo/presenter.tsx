@@ -27,7 +27,7 @@ const Logo = styled.a<IStyle>`
   text-decoration: none;
 `;
 
-const Header: React.SFC<IProps> = ({
+const Presenter: React.SFC<IProps> = ({
   backgroundImage,
   href,
   style,
@@ -40,4 +40,4 @@ const Header: React.SFC<IProps> = ({
   );
 };
 
-export default Header;
+export default Presenter;

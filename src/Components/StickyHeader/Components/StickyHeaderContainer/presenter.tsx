@@ -29,8 +29,8 @@ const Container = styled.div<IStyle>`
   height: ${props => props.height};
 `;
 
-const Header: React.SFC<IProps> = ({ style, children }) => {
+const Presenter: React.SFC<IProps> = ({ style, children }) => {
   return <Container {...style}>{children}</Container>;
 };
 
-export default Header;
+export default Presenter;
