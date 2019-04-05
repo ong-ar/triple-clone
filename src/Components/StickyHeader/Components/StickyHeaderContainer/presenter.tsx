@@ -22,7 +22,7 @@ const Container = styled.div<IStyle>`
   right: 0px;
   opacity: ${props => props.opacity};
   transform: translateY(${props => props.transform});
-  transition-duration: ${props => props.duration}ms;
+  transition-duration: ${props => props.duration};
   background-color: ${props => props.backgroundColor};
   border-bottom: ${props => props.borderBottom};
   z-index: ${props => props.zIndex};
