@@ -1,23 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import background_img from "../../images/img-intro-logo-dark@2x.png";
-import Header from "./Components/StickyHeaderContainer";
-
-const HeaderLogo = styled.a`
-  left: 50px;
-  width: 68px;
-  height: 24px;
-  background-size: 68px 24px;
-  background-image: url(${background_img});
-  text-indent: -9999px;
-  top: 50%;
-  position: absolute;
-  background-repeat: no-repeat;
-  margin: 0px;
-  margin-top: -12px;
-  padding: 0px;
-  text-decoration: none;
-`;
+import Logo from "./Components/Logo";
+import HeaderContainer from "./Components/StickyHeaderContainer";
 
 const ExtraActionsContainer = styled.div`
   padding-right: 50px;
@@ -40,7 +25,7 @@ const ExtraActionsItem = styled.a`
 
 const StickyHeader: React.SFC = () => {
   return (
-    <Header
+    <HeaderContainer
       topOffset={120}
       duration={"600"}
       style={{
@@ -50,7 +35,12 @@ const StickyHeader: React.SFC = () => {
         zIndex: "1"
       }}
     >
-      <HeaderLogo href="https://triple.guide">TRIPLE</HeaderLogo>
+      <Logo
+        backgroundImage={"url(" + background_img + ")"}
+        href="https://triple.guide"
+      >
+        TRIPLE
+      </Logo>
       <ExtraActionsContainer>
         <ExtraActionsItem href="https://triple-corp.com">
           Triple Team
@@ -59,7 +49,7 @@ const StickyHeader: React.SFC = () => {
           Contact
         </ExtraActionsItem>
       </ExtraActionsContainer>
-    </Header>
+    </HeaderContainer>
   );
 };
 

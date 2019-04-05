@@ -7,7 +7,7 @@ interface IProps {
   style?: IStyle;
 }
 
-const Header: React.FC<IProps> = ({
+const Container: React.FC<IProps> = ({
   topOffset = 120,
   duration = "0",
   style = {},
@@ -36,4 +36,4 @@ const Header: React.FC<IProps> = ({
   );
 };
 
-export default Header;
+export default Container;
