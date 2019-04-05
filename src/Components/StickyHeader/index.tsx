@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import background_img from "../../images/img-intro-logo-dark@2x.png";
-import Header from "../StickyHeaderContainer";
+import Header from "./Components/StickyHeaderContainer";
 
 const HeaderLogo = styled.a`
   left: 50px;
@@ -38,15 +38,16 @@ const ExtraActionsItem = styled.a`
   text-decoration: none;
 `;
 
-const StickyHeader: React.FC = () => {
+const StickyHeader: React.SFC = () => {
   return (
     <Header
       topOffset={120}
+      duration={"600"}
       style={{
         backgroundColor: "white",
         borderBottom: "1px solid rgb(239, 239, 239)",
         height: "80px",
-        zIndex: 1
+        zIndex: "1"
       }}
     >
       <HeaderLogo href="https://triple.guide">TRIPLE</HeaderLogo>
