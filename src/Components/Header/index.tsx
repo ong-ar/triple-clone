@@ -1,25 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import background_img from "../../images/img-main-logo-white@3x.png";
-
-const Container = styled.div`
-  padding: 83px 50px 17px;
-  z-index: 1;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-`;
-
-const HeaderLogo = styled.a`
-  width: 77px;
-  height: 25px;
-  background-size: 77px 25px;
-  display: inline-block;
-  background-image: url(${background_img});
-  vertical-align: top;
-  background-repeat: no-repeat;
-`;
+import HeaderContainer from "./Components/HeaderContainer";
+import Logo from "./Components/Logo";
 
 const ExtraActionsContainer = styled.div`
   float: right;
@@ -38,8 +21,11 @@ const ExtraActionsItem = styled.a`
 
 const Header: React.FC = () => {
   return (
-    <Container>
-      <HeaderLogo href="https://triple.guide/intro/" />
+    <HeaderContainer>
+      <Logo
+        backgroundImage={"url(" + background_img + ")"}
+        href="https://triple.guide/intro/"
+      />
       <ExtraActionsContainer>
         <ExtraActionsItem href="https://triple-corp.com">
           Triple Team
@@ -48,7 +34,7 @@ const Header: React.FC = () => {
           Contact
         </ExtraActionsItem>
       </ExtraActionsContainer>
-    </Container>
+    </HeaderContainer>
   );
 };
 
