@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import * as React from "react";
 import styled from "styled-components";
 import background_img from "../../images/img-01-bg.png";
@@ -88,7 +87,7 @@ const ContentsFourthItem2 = styled.div`
   background-color: rgb(250, 250, 250);
 `;
 
-const Header: React.FC = () => {
+const SectionFirst: React.FC = () => {
   return (
     <SectionContainer
       style={{
@@ -118,4 +117,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default SectionFirst;
