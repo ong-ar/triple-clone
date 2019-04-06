@@ -1,20 +1,11 @@
 import "bootstrap/dist/css/bootstrap.css";
 import * as React from "react";
-import { Button } from "react-bootstrap";
 import styled from "styled-components";
 import background_img from "../../images/img-01-bg.png";
 import screen_img from "../../images/img-01-screen.jpg";
 import { FadeIn } from "../../Keyframes";
-
-const Container = styled.div`
-  position: relative;
-  background-image: url(${background_img});
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background: inherit inherit inherit inherit inherit inherit inherit;
-  background-position: center center;
-`;
+import Button from "./Components/Button";
+import Container from "./Components/Container";
 
 const Section = styled.div`
   width: 1040px;
@@ -98,24 +89,8 @@ const ContentsFourthItem2 = styled.div`
 `;
 
 const Header: React.FC = () => {
-  const [ButtonOver, setButtonOver] = React.useState(false);
-
-  const [Style, setStyle] = React.useState({});
-
-  const buttonToggle = (): void => {
-    setButtonOver(!ButtonOver);
-  };
-
-  React.useEffect(() => {
-    if (ButtonOver) {
-      setStyle({ backgroundColor: "rgb(255, 255, 255)" });
-    } else {
-      setStyle({});
-    }
-  });
-
   return (
-    <Container>
+    <Container style={{ background_image: "url(" + background_img + ")" }}>
       <Section>
         <Contents>
           <ContentsFirstItem>
@@ -125,20 +100,7 @@ const Header: React.FC = () => {
             여행을 도와드리는 일은 <strong>트리플</strong>이 가장 잘합니다.
           </ContentsSecondItem>
           <ContentsThirdItemContainer>
-            <Button
-              variant="outline-light"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "25px",
-                height: "50px",
-                width: "180px",
-                ...Style
-              }}
-              onMouseOver={buttonToggle}
-              onMouseOut={buttonToggle}
-            >
-              앱 설치하기
-            </Button>
+            <Button>앱 설치하기</Button>
           </ContentsThirdItemContainer>
           <ContentsFourthItemContainer>
             <ContentsFourthItem />

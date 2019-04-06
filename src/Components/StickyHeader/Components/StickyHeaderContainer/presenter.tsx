@@ -5,9 +5,9 @@ export interface IStyle {
   opacity?: string;
   transform?: string;
   duration?: string;
-  backgroundColor?: string;
-  borderBottom?: string;
-  zIndex?: string;
+  background_color?: string;
+  border_bottom?: string;
+  z_index?: string;
   height?: string;
 }
 
@@ -23,9 +23,9 @@ const Container = styled.div<IStyle>`
   opacity: ${props => props.opacity};
   transform: translateY(${props => props.transform});
   transition-duration: ${props => props.duration};
-  background-color: ${props => props.backgroundColor};
-  border-bottom: ${props => props.borderBottom};
-  z-index: ${props => props.zIndex};
+  background-color: ${props => props.background_color};
+  border-bottom: ${props => props.border_bottom};
+  z-index: ${props => props.z_index};
   height: ${props => props.height};
 `;
 

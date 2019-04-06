@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 export interface IStyle {
-  fontSize?: string;
+  font_size?: string;
 }
 
 interface IProps {
@@ -12,7 +12,7 @@ interface IProps {
 
 const ExtraActionItem = styled.a<IStyle>`
   line-height: 80px;
-  font-size: ${props => props.fontSize};
+  font-size: ${props => props.font_size};
   height: 80px;
   margin: 0px 0px 0px 34px;
   font-family: sans-serif;

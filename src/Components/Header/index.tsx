@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <Logo
-        backgroundImage={"url(" + background_img + ")"}
+        background_image={"url(" + background_img + ")"}
         href="https://triple.guide/intro/"
       />
       <ExtraActionsContainer>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const HeaderContainer = styled.a`
+const HeaderContainer = styled.div`
   padding: 83px 50px 17px;
   z-index: 1;
   position: absolute;

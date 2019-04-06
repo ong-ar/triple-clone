@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const ExtraActionContainer = styled.a`
+const ExtraActionContainer = styled.div`
   padding-right: 50px;
   position: absolute;
   right: 0px;

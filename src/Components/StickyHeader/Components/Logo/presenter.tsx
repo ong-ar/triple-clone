@@ -2,12 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 
 export interface IStyle {
-  backgroundImage?: string;
+  background_image?: string;
 }
 
 interface IProps {
   href?: string;
-  backgroundImage: string;
+  background_image: string;
   style?: IStyle;
 }
 
@@ -16,7 +16,7 @@ const Logo = styled.a<IStyle>`
   width: 68px;
   height: 24px;
   background-size: 68px 24px;
-  background-image: ${props => props.backgroundImage};
+  background-image: ${props => props.background_image};
   text-indent: -9999px;
   top: 50%;
   position: absolute;
@@ -28,13 +28,13 @@ const Logo = styled.a<IStyle>`
 `;
 
 const Presenter: React.SFC<IProps> = ({
-  backgroundImage,
+  background_image,
   href,
   style,
   children
 }) => {
   return (
-    <Logo {...style} backgroundImage={backgroundImage} href={href}>
+    <Logo {...style} background_image={background_image} href={href}>
       {children}
     </Logo>
   );

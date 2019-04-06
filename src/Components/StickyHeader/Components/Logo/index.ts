@@ -1,2 +1,2 @@
-import Container from "./constainer";
+import Container from "./container";
 export default Container;

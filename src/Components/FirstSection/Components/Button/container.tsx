@@ -7,11 +7,16 @@ interface IProps {
 }
 
 const Container: React.FC<IProps> = ({
-  href = "",
-  style = { font_size: "17px" },
+  href,
+  style = {
+    background_color: "rgba(255, 255, 255, 0.1)",
+    border_radius: "25px",
+    height: "50px",
+    width: "180px"
+  },
   children
 }) => {
-  return <Presenter href={href} style={{ ...style }} children={children} />;
+  return <Presenter style={{ ...style }} href={href} children={children} />;
 };
 
 export default Container;
