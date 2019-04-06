@@ -10,7 +10,7 @@ interface IProps {
 const Container: React.FC<IProps> = ({
   background_image,
   href = "",
-  style = {},
+  style,
   children
 }) => {
   return (

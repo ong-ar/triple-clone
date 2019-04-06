@@ -10,7 +10,7 @@ interface IProps {
 const Container: React.FC<IProps> = ({
   topOffset = 120,
   duration = "0",
-  style = {},
+  style,
   children
 }) => {
   const [opacity, setOpacity] = React.useState("0");

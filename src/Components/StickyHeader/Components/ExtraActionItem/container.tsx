@@ -6,12 +6,18 @@ interface IProps {
   style?: IStyle;
 }
 
-const Container: React.FC<IProps> = ({
-  href = "",
-  style = { font_size: "17px" },
-  children
-}) => {
-  return <Presenter href={href} style={{ ...style }} children={children} />;
+const preStyle: IStyle = {
+  font_size: "17px"
+};
+
+const Container: React.FC<IProps> = ({ href = "", style, children }) => {
+  return (
+    <Presenter
+      href={href}
+      style={{ ...preStyle, ...style }}
+      children={children}
+    />
+  );
 };
 
 export default Container;

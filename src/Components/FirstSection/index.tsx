@@ -4,8 +4,8 @@ import styled from "styled-components";
 import background_img from "../../images/img-01-bg.png";
 import screen_img from "../../images/img-01-screen.jpg";
 import { FadeIn } from "../../Keyframes";
+import SectionContainer from "../SectionContainer";
 import Button from "./Components/Button";
-import Container from "./Components/Container";
 
 const Section = styled.div`
   width: 1040px;
@@ -90,7 +90,13 @@ const ContentsFourthItem2 = styled.div`
 
 const Header: React.FC = () => {
   return (
-    <Container style={{ background_image: "url(" + background_img + ")" }}>
+    <SectionContainer
+      style={{
+        background_image: "url(" + background_img + ")",
+        background_repeat: "no-repeat",
+        background_size: "100% 100%"
+      }}
+    >
       <Section>
         <Contents>
           <ContentsFirstItem>
@@ -108,7 +114,7 @@ const Header: React.FC = () => {
           </ContentsFourthItemContainer>
         </Contents>
       </Section>
-    </Container>
+    </SectionContainer>
   );
 };
 
