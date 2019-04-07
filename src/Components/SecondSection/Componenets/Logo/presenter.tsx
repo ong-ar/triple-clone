@@ -1,8 +1,13 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { Keyframes } from "styled-components";
 
 export interface IStyle {
   background_image?: string;
+  opacity?: string;
+  animation_duration?: string;
+  animation_name?: Keyframes;
+  animation_delay?: string;
+  animation_fill_mode?: string;
 }
 
 interface IProps {
@@ -11,6 +16,11 @@ interface IProps {
 }
 
 const Logo = styled.div<IStyle>`
+  opacity: ${props => props.opacity};
+  animation-duration: ${props => props.animation_duration};
+  animation-name: ${props => props.animation_name};
+  animation-delay: ${props => props.animation_delay};
+  animation-fill-mode: ${props => props.animation_fill_mode};
   position: absolute;
   top: 150px;
   width: 400px;
