@@ -37,13 +37,13 @@ const SecondSection: React.FC = () => {
           animation_delay={"400ms"}
           style={{ opacity: "0", margin_left: "623px", padding_top: "150px" }}
         >
-          <Metrics count_end={350}>
+          <Metrics count_end={350} delay={0.6}>
             <strong>만 명</strong>의 사용자
           </Metrics>
-          <Metrics count_end={21}>
+          <Metrics count_end={21} delay={0.6}>
             <strong>만 개</strong>의 리뷰
           </Metrics>
-          <Metrics count_end={650}>
+          <Metrics count_end={650} delay={0.6}>
             <strong>만 개</strong>의 저장
           </Metrics>
         </ContentsContainer>
