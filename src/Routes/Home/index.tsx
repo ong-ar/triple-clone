@@ -1,6 +1,7 @@
 import * as React from "react";
 import FirstSection from "../../Components/FirstSection";
 import Header from "../../Components/Header";
+import SecondSection from "../../Components/SecondSection";
 import StickyHeader from "../../Components/StickyHeader";
 
 const Home: React.FC = () => {
@@ -9,6 +10,7 @@ const Home: React.FC = () => {
       <StickyHeader />
       <Header />
       <FirstSection />
+      <SecondSection />
     </div>
   );
 };
