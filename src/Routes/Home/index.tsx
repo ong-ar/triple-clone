@@ -1,4 +1,5 @@
 import * as React from "react";
+import TrackVisibility from "react-on-screen";
 import styled from "styled-components";
 import FirstSection from "../../Components/FirstSection";
 import Header from "../../Components/Header";
@@ -13,7 +14,13 @@ const Home: React.FC = () => {
       <StickyHeader />
       <Header />
       <FirstSection />
-      <SecondSection />
+      <TrackVisibility
+        once={true}
+        partialVisibility={true}
+        style={{ height: "596px" }}
+      >
+        {({ isVisible }) => isVisible && <SecondSection />}
+      </TrackVisibility>
     </Container>
   );
 };

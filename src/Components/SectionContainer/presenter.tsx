@@ -16,13 +16,13 @@ interface IProps {
 }
 
 const Container = styled.div<IStyle>`
-  position: ${props => props.position}
+  position: ${props => props.position};
+  overflow: ${props => props.overflow};
+  background: ${props => props.background};
   background-image: ${props => props.background_image};
-  background-size: ${props => props.background_size}
-  background-repeat: ${props => props.background_repeat}
-  overflow: ${props => props.overflow}
-  background: ${props => props.background}
-  background-position: ${props => props.background_position}
+  background-size: ${props => props.background_size};
+  background-repeat: ${props => props.background_repeat};
+  background-position: ${props => props.background_position};
 `;
 
 const Presenter: React.SFC<IProps> = ({ style, children }) => {

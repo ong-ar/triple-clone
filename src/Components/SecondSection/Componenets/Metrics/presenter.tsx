@@ -11,7 +11,7 @@ interface IProps {
 }
 
 const Metrics = styled.div<IStyle>`
-  font-size: ${props => props.font_size}
+  font-size: ${props => props.font_size};
   letter-spacing: -1px;
   margin-bottom: 20px;
   color: rgb(58, 58, 58);
