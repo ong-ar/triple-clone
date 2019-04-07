@@ -1,0 +1,36 @@
+version: "2"
+services:
+  triple:
+    image: "node:10"
+    restart: always
+    command: bash -c "yarn && yarn build && yarn global add serve && serve -s build"
+    working_dir: /home/node/app
+    ports:
+      - 5000
+    volumes:
+      - .:/home/node/app
+    environment:
+      - VIRTUAL_HOST=triple.ong-ar.com
+      - VIRTUAL_PORT=5000
+      - LETSENCRYPT_HOST=triple.ong-ar.com
+      - LETSENCRYPT_EMAIL=reclusis@gmail.com
+
+nginx-proxy:
+  image: jwilder/nginx-proxy
+  restart: always
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - "/var/run/docker.sock:/tmp/docker.sock:ro"
+    - "../certs:/etc/nginx/certs:rw"
+    - "/etc/nginx/vhost.d"
+    - "/usr/share/nginx/html"
+
+letsencrypt-nginx-proxy-companion:
+  image: jrcs/letsencrypt-nginx-proxy-companion
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    - "../certs:/etc/nginx/certs:rw"
+  volumes_from:
+    - "nginx-proxy"
