@@ -18,7 +18,7 @@ const Container: React.FC<IProps> = ({
 
   React.useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (topOffset > window.scrollY) {
+      if (topOffset > window.pageYOffset) {
         setOpacity("0");
         setTransform("-20%");
       } else {
