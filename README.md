@@ -1,7 +1,7 @@
 ## 트리플 메인사이트 클론
 
 - react with typescript
-- Link: [triple.ong-ar.com][https://triple.ong-ar.com]
+- Link: [triple.ong-ar.com](https://triple.ong-ar.com)
 
 ### 1. 설치
 
