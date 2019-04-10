@@ -5,7 +5,7 @@ import Home from "../Home";
 import "./style.css";
 
 const AppPresenter: React.FC = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes />
   </BrowserRouter>
 );
