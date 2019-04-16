@@ -1,8 +1,7 @@
 ## 트리플 메인사이트 클론
 
 - react with typescript
-- Link1: [triple.ong-ar.com](https://triple.ong-ar.com)
-- Link2: [ong-ar.github.io/triple-clone](https://ong-ar.github.io/triple-clone)
+- Link: [ong-ar.github.io/triple-clone](https://ong-ar.github.io/triple-clone)
 
 ### 1. 설치
 
