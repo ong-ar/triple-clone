@@ -21,14 +21,41 @@ $ yarn add react-on-screen # 화면 렌더링
 $ yarn add react-countup # 숫자 카운트
 ```
 
-### 2. 섹션2
+### 2. 프로젝트
 
-#### 요청사항
+#### 디렉토리 구조
+```
+my-app/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+  src/
+    Components/
+      Section/
+        index.tsx or (container.tsx / presenter.tsx / index.ts)
+        Components/
+          index.tsx or (container.tsx / presenter.tsx / index.ts)
+    Routes/
+      App/
+        index.tsx or (container.tsx / presenter.tsx / index.ts)
+    Images/
+      1.png
+```
 
-- 350만 명의 사용자, 21만 개의 리뷰, 650만 개의 저장 등 문구에서 숫자는 0부터 증가합니다.
-- 좌측 이미지 --> 사용자, 리뷰, 저장 문구 --> 수상 내역 순으로 화면에 보여집니다.
-- 모든 애니메이션의 duration은 700ms이고, 3개의 애니메이션은 100ms 간격으로 차례로 시작합니다.
+#### Container & Presenter
+- container: state 및 데이터 관리 및 기능
+- presenter: 마크업 및 스타일
 
-#### 변경사항
+#### Style (css)
+- styled-components 사용
+- 필요하다면 css 파일도 사용
 
-- 400ms 간격으로 변경: 100ms 간격으로 요청 시 거의 인지가 불가능하여 간격을 100ms -> 400ms 으로 변경
+### 3. 느낀 점
+
+- 서버 통신 없는 프로젝트일 경우 container, presenter 를 굳이 나눌 필요는 없을 것 같다.
+- style 을 props 로 관리하는 범위를 정하는 것이 어려웠다.
+- 컴포넌트를 최소 단위로 가져갈 것인지 (예: button, input) 고민하게 된다.
+- 디렉토리 구조도 여러 가지로 생각해야 될 것 같다.
