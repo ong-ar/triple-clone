@@ -45,6 +45,9 @@ my-app/
       1.png
 ```
 
+#### Programming
+- functional programming + hooks
+
 #### Container & Presenter
 - container: state 및 데이터 관리 및 기능
 - presenter: 마크업 및 스타일
